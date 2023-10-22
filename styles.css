@@ -332,8 +332,14 @@ button:hover {
   }
 }
 
-@media (max-width: 826px) {
-  
+@media (max-width: 704px) {
+  .dropdown {
+    margin-right: auto;
+  }
+
+  nav {
+    margin-right: auto;
+  }
 }
 
 @media (max-width: 600px) {
@@ -369,9 +375,7 @@ button:hover {
     padding-left: 1.5rem;
   }
 
-  .dropdown {
-    margin-right: auto;
-  }
+ 
 
 
 }
