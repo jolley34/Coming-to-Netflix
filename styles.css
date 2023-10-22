@@ -24,22 +24,22 @@ body {
   scroll-behavior: smooth;
 }
 
-/* Make the header sticky at the top */
+
 .sticky-header {
   position: sticky;
   top: 0;
   z-index: 100;
 }
 
-/* Style your header here */
+
 header {
   background-color: black;
-  transition: background-color 0.5s; /* Add a transition for a smooth color change */
+  transition: background-color 0.5s; 
 }
 
-/* When scrolling over containers, make the header transparent */
+
 .content {
-  padding-top: 100px; /* Ensure content doesn't get hidden by the sticky header */
+  padding-top: 100px; 
 }
 
 .container1,
@@ -56,30 +56,30 @@ header {
 .container12,
 .container13 {
   position: relative;
-  padding-bottom: 4rem; /* Hur långt ifrån botten grid containern ska vara */
+  padding-bottom: 4rem; 
 
-  display: grid; /* Display att det är en grid */
-  grid-auto-flow: column; /* Radar upp mina cards i en column och fortsätter jag lägga till nya cards så hamnar dom i en overflow */
-  grid-auto-columns: 45%; /* Hur mycket av mina cards jag vill visa på sidan har 45% då jag vill att man ska se att något mer finns där att scrolla för*/
-  grid-column-gap: 2rem; /* Gapet mellan cardsen */
+  display: grid;
+  grid-auto-flow: column; 
+  grid-auto-columns: 45%; 
+  grid-column-gap: 2rem; 
 
-  overflow-x: scroll; /* Vid overflow så har jag valt scroll dvs för att se overflowen av cards så behöver du scrolla */
-  scroll-snap-type: mandatory; /* Hur srcollen ska bete sig, med mandatory så snapar den till och rättar sig */
-  scroll-padding: 2rem; /* Scrollen ska ha samma glipa vid scrollen som gapet */
-  padding-inline: 6rem; /* Hur långt in på sidan griden ska börja, här tog jag en padding-inline då den funkade bättre med min overflow grid  */
+  overflow-x: scroll; 
+  scroll-snap-type: mandatory; 
+  scroll-padding: 2rem; 
+  padding-inline: 6rem; 
 }
 
 .card {
-  background-color: #1d1d1d; /* Backgrundsfärg på grid cardet */
+  background-color: #1d1d1d; 
   height: 100%;
   overflow: hidden;
 
-  border-radius: 10px; /* Rundade kanter på cardet */
+  border-radius: 10px; 
 
-  display: grid; /* Vill att innehållet i cardet placeras som en grid */
-  justify-items: left; /* Justerar innehållet i center av cardet */
-  align-items: left; /* Justerar innehållet i center av cardet */
-  word-break: normal; /* Prevent text from breaking in the overflow area */
+  display: grid; 
+  justify-items: left; 
+  align-items: left; 
+  word-break: normal; 
 
   border-radius: 10px;
 }
@@ -104,11 +104,11 @@ h3 {
 }
 
 .video-container {
-  display: none; /* Initially hide the video container */
+  display: none; 
 }
 
 .card-image {
-  display: block; /* Ensure the image is visible */
+  display: block; 
 }
 
 .grid-heading {
@@ -133,7 +133,7 @@ h3 {
   padding-bottom: 0.75rem;
   padding-top: 0.75rem;
   background-color: #121212;
-  z-index: 1; /* Ensure it's above the image */
+  z-index: 1; 
   position: absolute;
   word-break: normal;
   font-size: 1.5rem;
@@ -159,8 +159,8 @@ img {
   border-radius: 10px 10px 0px 0px;
   overflow: hidden;
   width: 100%;
-  height: 300px; /* Den ska fylla ut bredden i kortet */
-  object-fit: cover; /* så att bilden alltid stannar i cardet och anpassar sig efter förminskning */
+  height: 300px; 
+  object-fit: cover; 
 }
 
 li,
@@ -253,7 +253,7 @@ button:hover {
   display: none;
   position: absolute;
   top: 100%;
-  right: 0; /* Initially, it's hidden to the right of the button */
+  right: 0; 
   justify-content: left;
   align-items: left;
 
@@ -266,8 +266,8 @@ button:hover {
 }
 
 .dropdown.show .dropdown-content {
-  display: flex; /* Show the menu when the dropdown has the "show" class */
-  flex-direction: column; /* You can switch to a column layout if needed */
+  display: flex; 
+  flex-direction: column; 
 }
 
 .selected-option {
@@ -275,8 +275,8 @@ button:hover {
     130,
     130,
     130
-  ); /* Change this to the desired selected option color */
-  color: black; /* Change the text color to make it more visible */
+  ); 
+  color: black; 
   border-radius: 2.5px;
   padding: 0.25rem;
 }
@@ -376,7 +376,7 @@ button:hover {
   .container12,
   .container13 {
     padding-inline: 2rem;
-    grid-auto-columns: 90%; /* Hur mycket av mina cards jag vill visa på sidan har 45% då jag vill att man ska se att något mer finns där att scrolla för*/
+    grid-auto-columns: 90%; 
   }
 
   header {
@@ -414,6 +414,6 @@ button:hover {
   .container11,
   .container12,
   .container13 {
-    grid-auto-columns: 25%; /* Hur mycket av mina cards jag vill visa på sidan har 45% då jag vill att man ska se att något mer finns där att scrolla för*/
+    grid-auto-columns: 25%; 
   }
 }
