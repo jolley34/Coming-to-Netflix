@@ -1,0 +1,109 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coming to Netflix</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="sticky-header">
+      <header>
+        <a class="logo" href="#top"
+          >Coming to
+          <img
+            class="mainlogo"
+            src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png"
+        /></a>
+        <nav>
+          <ul class="nav__links">
+            <li><a href="#top">This Month</a></li>
+            <li><a href="#next-month-section">Next Month</a></li>
+            <li><a href="#worth-the-wait-section">Worth The Wait</a></li>
+          </ul>
+        </nav>
+        
+        <div class="dropdown">
+          <button class="cta" id="filterButton">Filter</button>
+          <div class="dropdown-content">
+            <a href="#" class="dropdown-option" id="all">Show All</a>
+            <a href="#" class="dropdown-option" id="movies">Movies</a>
+            <a href="#" class="dropdown-option" id="series">Series</a>
+            <a href="#" class="dropdown-option" id="originals">Originals</a>
+            <a href="#" class="dropdown-option" id="documentary">Documentary</a>
+            <a href="#" class="dropdown-option" id="older">Old Movies / Series</a>
+            <a href="#" class="dropdown-option" id="new">New Movies / Series</a>
+            <!-- Add more options as needed -->
+          </div>
+        </div>
+        
+          
+        </button></a>
+      </header>
+    </div>
+    
+   
+
+    <main>
+      <section id="this-month-section">
+        <div class="grid-heading-2">This month</div>
+        <!-- ... This Month content ... -->
+      </section>
+      <div class="grid-heading">November 1-5</div>
+      <div class="container1"></div>
+      <div class="grid-heading">November 6-10</div>
+      <div class="container2"></div>
+      <div class="grid-heading">November 11-15</div>
+      <div class="container3"></div>
+      <div class="grid-heading">November 16-20</div>
+      <div class="container4"></div>
+      <div class="grid-heading">November 21-25</div>
+      <div class="container5"></div>
+      <div class="grid-heading">November 26-31</div>
+      <div class="container6"></div>
+
+      
+      <section id="next-month-section">
+        <div class="grid-heading-2">Next month</div>
+        <!-- ... Next Month content ... -->
+      </section>
+      <div class="grid-heading">December 1-5</div>
+      <div class="container7"></div>
+      <div class="grid-heading">December 6-10</div>
+      <div class="container8"></div>
+      <div class="grid-heading">December 11-15</div>
+      <div class="container9"></div>
+      <div class="grid-heading">December 16-20</div>
+      <div class="container10"></div>
+      <div class="grid-heading">December 21-25</div>
+      <div class="container11"></div>
+      <div class="grid-heading">December 26-31</div>
+      <div class="container12"></div>
+
+      <div class="grid-heading-2" id="worth-the-wait-section">Worth the wait</div>
+      <div class="grid-heading">Big movies & series to look forward to</div>
+      <div class="container13"></div>
+
+      <!-- The core Firebase JS SDK is always required and must be listed first -->
+      <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>
+
+      <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+          apiKey: "AIzaSyDMEnkQ3xwdFHUP6kx2Ayo6ZSmcEqiKP54",
+          authDomain: "netflix-countdown-3899d.firebaseapp.com",
+          projectId: "netflix-countdown-3899d",
+          storageBucket: "netflix-countdown-3899d.appspot.com",
+          messagingSenderId: "390576348775",
+          appId: "1:390576348775:web:1dd17e67d3b64429edbec2",
+          measurementId: "G-S069DTZYPG",
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+      </script>
+      <script src="index.js"></script>
+    </main>
+    <footer></footer>
+  </body>
+</html>

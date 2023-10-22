@@ -1,0 +1,419 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(25, 25, 25);
+  color: rgb(255, 255, 255);
+  scroll-behavior: smooth;
+}
+
+/* Make the header sticky at the top */
+.sticky-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Style your header here */
+header {
+  background-color: black;
+  transition: background-color 0.5s; /* Add a transition for a smooth color change */
+}
+
+/* When scrolling over containers, make the header transparent */
+.content {
+  padding-top: 100px; /* Ensure content doesn't get hidden by the sticky header */
+}
+
+.container1,
+.container2,
+.container3,
+.container4,
+.container5,
+.container6,
+.container7,
+.container8,
+.container9,
+.container10,
+.container11,
+.container12,
+.container13 {
+  position: relative;
+  padding-bottom: 4rem; /* Hur långt ifrån botten grid containern ska vara */
+
+  display: grid; /* Display att det är en grid */
+  grid-auto-flow: column; /* Radar upp mina cards i en column och fortsätter jag lägga till nya cards så hamnar dom i en overflow */
+  grid-auto-columns: 45%; /* Hur mycket av mina cards jag vill visa på sidan har 45% då jag vill att man ska se att något mer finns där att scrolla för*/
+  grid-column-gap: 2rem; /* Gapet mellan cardsen */
+
+  overflow-x: scroll; /* Vid overflow så har jag valt scroll dvs för att se overflowen av cards så behöver du scrolla */
+  scroll-snap-type: mandatory; /* Hur srcollen ska bete sig, med mandatory så snapar den till och rättar sig */
+  scroll-padding: 2rem; /* Scrollen ska ha samma glipa vid scrollen som gapet */
+  padding-inline: 6rem; /* Hur långt in på sidan griden ska börja, här tog jag en padding-inline då den funkade bättre med min overflow grid  */
+}
+
+.card {
+  background-color: #1d1d1d; /* Backgrundsfärg på grid cardet */
+  height: 100%;
+  overflow: hidden;
+
+  border-radius: 10px; /* Rundade kanter på cardet */
+
+  display: grid; /* Vill att innehållet i cardet placeras som en grid */
+  justify-items: left; /* Justerar innehållet i center av cardet */
+  align-items: left; /* Justerar innehållet i center av cardet */
+  word-break: normal; /* Prevent text from breaking in the overflow area */
+
+  border-radius: 10px;
+}
+
+h3 {
+  display: none;
+}
+
+
+
+.countdown {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: white;
+  word-spacing: 0.75rem;
+  padding-left: 2rem;
+  padding-bottom: 1.5rem;
+}
+
+.media-container {
+  position: relative;
+}
+
+.video-container {
+  display: none; /* Initially hide the video container */
+}
+
+.card-image {
+  display: block; /* Ensure the image is visible */
+}
+
+.grid-heading {
+  font-size: 1.5rem;
+  padding-inline: 6rem;
+  margin-bottom: 1rem;
+  color: #919191;
+}
+
+.grid-heading-2 {
+  font-weight: 700;
+  font-size: 2.25rem;
+  padding-inline: 6rem;
+  margin-bottom: 0.5rem;
+  color: rgb(176, 176, 176);
+}
+
+.release {
+  white-space: nowrap;
+  border-radius: 0px 0px 10px 0px;
+  padding-inline: 2rem;
+  padding-bottom: 0.75rem;
+  padding-top: 0.75rem;
+  background-color: #121212;
+  z-index: 1; /* Ensure it's above the image */
+  position: absolute;
+  word-break: normal;
+  font-size: 1.5rem;
+  font-weight: 100;
+  color: white;
+}
+
+.card h2 {
+  color: #919191;
+  padding-left: 2rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  margin-bottom: 0;
+  font-size: 1.25rem;
+  justify-self: left;
+  font-weight: 400;
+}
+.card p {
+  font-size: 1.5rem;
+}
+
+img {
+  border-radius: 10px 10px 0px 0px;
+  overflow: hidden;
+  width: 100%;
+  height: 300px; /* Den ska fylla ut bredden i kortet */
+  object-fit: cover; /* så att bilden alltid stannar i cardet och anpassar sig efter förminskning */
+}
+
+li,
+a,
+button {
+  font-weight: 500;
+  font-size: 1rem;
+  color: #edf0f1;
+  text-decoration: none;
+}
+
+header {
+  background-color: #1d1d1d;
+  gap: 2rem;
+  padding-top: 2rem;
+  padding-inline: 6rem;
+  padding-bottom: 2rem;
+  margin-bottom: 4rem;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.7rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: auto;
+}
+
+.nav__links li {
+  list-style: none;
+  display: inline-block;
+  padding: 0;
+  margin-right: 2rem;
+}
+
+.nav__links li:nth-child(3) {
+  margin-right: 0;
+}
+
+.nav__links li a {
+  transition: all 0.3 ease 0s;
+  font-size: 1rem;
+}
+
+.nav__links li a:hover {
+  color: rgb(195, 45, 45);
+}
+
+button {
+  padding: 0.75rem 1.5rem;
+  background-color: rgb(46, 46, 46);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  font-size: 1rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+button:hover {
+  background-color: rgb(69, 69, 69);
+}
+
+.logoheader {
+  width: 150px;
+  display: flex;
+}
+
+.mainlogo {
+  width: 157px;
+  height: auto;
+  display: flex;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-option {
+  font-size: 1rem;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0; /* Initially, it's hidden to the right of the button */
+  justify-content: left;
+  align-items: left;
+
+  background: #282828;
+  z-index: 1;
+  width: 100%;
+  border-radius: 0px 0px 5px 5px;
+  padding: 1rem;
+  gap: 1.5rem;
+}
+
+.dropdown.show .dropdown-content {
+  display: flex; /* Show the menu when the dropdown has the "show" class */
+  flex-direction: column; /* You can switch to a column layout if needed */
+}
+
+.selected-option {
+  background-color: rgb(
+    130,
+    130,
+    130
+  ); /* Change this to the desired selected option color */
+  color: black; /* Change the text color to make it more visible */
+  border-radius: 2.5px;
+  padding: 0.25rem;
+}
+
+@media (max-width: 890px) {
+  .container1,
+  .container2,
+  .container3,
+  .container4,
+  .container5,
+  .container6,
+  .container7,
+  .container8,
+  .container9,
+  .container10,
+  .container11,
+  .container12,
+  .container13 {
+    grid-auto-columns: 90%;
+  }
+
+  .card p {
+    font-size: 1.25rem;
+  }
+
+  header {
+    padding-inline: 4rem;
+  }
+
+  .container1,
+  .container2,
+  .container3,
+  .container4,
+  .container5,
+  .container6,
+  .container7,
+  .container8,
+  .container9,
+  .container10,
+  .container11,
+  .container12,
+  .container13 {
+    padding-inline: 4rem;
+  }
+
+  .grid-heading {
+    padding-inline: 4rem;
+  }
+
+  .grid-heading-2 {
+    padding-inline: 4rem;
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 826px) {
+  
+}
+
+@media (max-width: 600px) {
+
+  .card h2 {
+    font-size: 0.75rem;
+  }
+
+  img {
+    height: 200px;
+  }
+
+
+  .mainlogo {
+    width: 100px;
+  }
+
+  .logo {
+    font-size: 1.06rem;
+  }
+}
+
+@media (max-width: 515px) {
+  .nav__links li a {
+    transition: all 0.3 ease 0s;
+    font-size: 0.75rem;
+  }
+
+  .container1,
+  .container2,
+  .container3,
+  .container4,
+  .container5,
+  .container6,
+  .container7,
+  .container8,
+  .container9,
+  .container10,
+  .container11,
+  .container12,
+  .container13 {
+    padding-inline: 2rem;
+    grid-auto-columns: 90%; /* Hur mycket av mina cards jag vill visa på sidan har 45% då jag vill att man ska se att något mer finns där att scrolla för*/
+  }
+
+  header {
+    padding-inline: 2rem;
+  }
+
+  .grid-heading {
+    padding-inline: 2rem;
+    font-size: 1.25rem;
+  }
+
+  .grid-heading-2 {
+    padding-inline: 2rem;
+    font-size: 1.5rem;
+  }
+
+  .release {
+    font-size: 1rem;
+  }
+
+ 
+}
+
+@media (min-width: 2000px) {
+  .container1,
+  .container2,
+  .container3,
+  .container4,
+  .container5,
+  .container6,
+  .container7,
+  .container8,
+  .container9,
+  .container10,
+  .container11,
+  .container12,
+  .container13 {
+    grid-auto-columns: 25%; /* Hur mycket av mina cards jag vill visa på sidan har 45% då jag vill att man ska se att något mer finns där att scrolla för*/
+  }
+}
